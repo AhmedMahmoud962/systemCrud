@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="iconmoon/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+</head>
+<body>
+    <!-- desgin -->
+    <main class="crud">
+
+
+        <div class="head">
+            <h1>CRUDS</h1>
+           <p>PRODUCT MANAGEMENT SYSTEM</p>
+        </div>
+
+
+        <div class="inputs">
+
+        <input id="title" type="text" placeholder="Title">
+
+
+        <div class="price">
+        <input onkeyup="getTotal()" id="price" type="number" placeholder="Price">
+        <input onkeyup="getTotal()" id="taxes" type="number" placeholder="taxes">
+        <input onkeyup="getTotal()" id="ads" type="number" placeholder="ads">
+        <input onkeyup="getTotal()" id="discount" type="number" placeholder="discount">
+        <small id="total"></small>
+        </div>
+
+
+
+        <input id="count" type="number" placeholder="Count">
+        <input id="catagory" type="text" placeholder="Catagory">
+        <button id="submit">Create</button>
+        </div>
+
+
+        <div class="outputs">
+       <div class="searchBlock">
+        <input onkeyup="SearchData(this.value)" id="search" type="text" placeholder="Search">
+       <div class="btnSearch">
+        <button onclick="getSearchMode(this.id)" id="searchTitle">Search By Title</button>
+        <button  onclick="getSearchMode(this.id)" id="searchCatagory">Search By Catagory</button>
+       </div>
+       </div>
+
+       <div id="DeleteAll">
+
+       </div>
+       <table>
+       <tr>
+        <th>id</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Taxes</th>
+        <th>ads</th>
+        <th>Discount</th>
+        <th>Total</th>
+        <th>Catagory</th>
+        <th>Updata</th>
+        <th>Delete</th>   
+       </tr>
+
+       <tbody id="tbody">
+         
+          
+          
+          
+       </tbody>
+
+       </table>
+    </div>
+
+
+    <button class="btn" id="btnScroll"> <i class="icon-upload2"></i> </button>
+    </main>
+
+<script src="javascript/main.js"></script>
+</body>
+</html>
